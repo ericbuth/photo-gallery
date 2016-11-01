@@ -1,0 +1,10 @@
+.gridTile {
+  cursor: pointer;
+}
+
+.photoActions {
+  z-index: 100;
+  position: relative;
+  bottom: 3px;
+  right: 8px;
+}
