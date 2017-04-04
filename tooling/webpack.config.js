@@ -25,8 +25,15 @@ module.exports = {
         loader: 'babel',
         include: path.resolve(__dirname, '../src')
       }, {
-        test: /\.css$/, // Only .css files
-        loader: 'style!css' // Run both loaders
+        test: /\.css$/,
+        loader: 'style-loader'
+      }, {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        }
       }
     ]
   },
